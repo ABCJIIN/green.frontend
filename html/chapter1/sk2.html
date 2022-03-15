@@ -11,17 +11,17 @@
         img { border: 0; }
         ul { list-style: none; }
 
-        header {
+        header, section, footer {
             box-sizing: border-box;
         }
 
         .header {
-            height: 58px;
+            height: 55px;
             background: pink;
         }
 
         .header__nav {
-            max-width: 1903px;
+            width: 100%;
             background: rgb(141, 141, 255);
             margin: 0 auto;
             display: flex;
@@ -29,14 +29,13 @@
         }
 
         .header__nav > h1 {
-            width: 44px;
-            height: 58px;
+            width: 64px;
             background: purple;
         }
 
         .header__nav > nav {
-            width: calc(100% - 44px);
-            height: 58px;
+            width: calc(100% - 64px);
+            height: 55px;
             background: rgb(146, 239, 255);
         }
 
@@ -56,14 +55,128 @@
             justify-content: space-around;
         } 
 
+        .sns > ul > li {
+            padding: 0 5px;
+        }
+
         .header__side {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            width: 378.47px;
+            width: 378.46px;
+        }
+
+        section .con {
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .main {
+            height: 860px;
+        }
+
+        .main__content {
+            background: rgb(183, 183, 255);
+        }
+
+        .gateway {
+            height: 511.95px;
+        }
+
+        .gateway > h1 {
+            width: 100%;
+            height: 36px;
+            padding: 41px 0 22px 19px ;
+            background: rgb(162, 255, 182);
+        }
+        
+        .gateway__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gateway__content > div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .gateway__content > .content__news {
+            background: rgb(255, 238, 140);
+        }
+
+        .gateway__content > .content__company {
+            background: rgb(214, 171, 255);
+        }
+
+        .gateway__content > .content__hire {
+            background: rgb(255, 163, 163);
+        }
+
+        .highlight {
+            height: 893.2px;
+            background: orange;
+        }
+
+        .highlight > h1 {
+            width: 100%;
+            height: 36px;
+            padding: 41px 0 22px 19;
+            background: rgb(159, 255, 210);
+        }
+
+        .highlight__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .highlight__content > div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .highlight__content > .content__first > .content__paper {
+            background: rgb(165, 207, 255);
+        }
+
+        .highlight__content > .content__first > .content__paper2 {
+            background: rgb(255, 208, 137);
+        }
+
+        .highlight__content > .content__two > .content__media {
+            background: rgb(255, 158, 255);
+        }
+
+        .highlight__content > .content__two > .content__channel {
+            background: rgb(166, 255, 166);
+        }
+
+        .footer {
+            height: 140.4px;
+            background: gray;
         }
 
 
+        @media all and (min-width:1024px){
+            .gateway__content {
+                flex-direction: row;
+            }
+
+            .highlight__content > .content__first {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .highlight__content > .content__two {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .highlight__content > div {
+                flex: 1;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -94,7 +207,32 @@
             </div>
         </div>
     </header>
-    <div class="wrap"></div>
+    <div class="wrap">
+        <section class="main">
+            <div class="main__content con"></div>
+        </section>
+        <section class="gateway">
+            <h1>SK GATEWAY</h1>
+                <div class="gateway__content con">
+                    <div class="content__news">SK뉴스 바로가기</div>
+                    <div class="content__company">계열사 바로가기</div>
+                    <div class="content__hire">채용 바로가기</div>
+                </div>
+        </section>
+        <section class="highlight">
+            <h1>SK HIGHLIGHT</h1>
+                <div class="highlight__content con">
+                    <div class="content__first">
+                        <div class="content__paper">SK뉴스-1</div>
+                        <div class="content__paper2">SK뉴스-2</div>
+                    </div>
+                    <div class="content__two">
+                        <div class="content__media">MEDIA SK</div>
+                        <div class="content__channel">SK채널</div>
+                    </div>
+                </div>
+        </section>
+    </div>
     <footer class="footer"></footer>
 </body>
 </html>
