@@ -66,11 +66,19 @@
             width: 378.46px;
         }
 
-        section .con {
+        section .main__content {
             width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        section .gateway__content, .highlight__content {
+            max-width: 1000px;
             margin: 0 auto;
             height: 100%;
         }
+
+
 
         .main {
             height: 860px;
@@ -80,76 +88,79 @@
             background: rgb(183, 183, 255);
         }
 
-        .gateway {
-            height: 511.95px;
-        }
+        /* .gateway {
+            height: 336px;
+        } */
 
-        .gateway > h1 {
-            width: 100%;
+        .gateway__content > h1 {
+            /* width: 100%; */
             height: 36px;
-            padding: 41px 0 22px 19px ;
+            /* padding: 41px 0 22px 19px ; */
             background: rgb(162, 255, 182);
         }
         
-        .gateway__content {
+        .gateway__content > .sk-gateway {
             display: flex;
             flex-direction: column;
         }
 
-        .gateway__content > div {
-            flex: 1;
-            text-align: center;
-        }
 
-        .gateway__content > .content__news {
+        .gateway__content > .sk-gateway > div {
+            margin: 10px 0;
+            height: 300px;
+        }
+        .gateway__content > .sk-gateway > .news {
             background: rgb(255, 238, 140);
         }
 
-        .gateway__content > .content__company {
+        .gateway__content > .sk-gateway > .company {
             background: rgb(214, 171, 255);
         }
 
-        .gateway__content > .content__hire {
+        .gateway__content > .sk-gateway > .hire {
             background: rgb(255, 163, 163);
         }
 
-        .highlight {
-            height: 893.2px;
-            background: orange;
-        }
+        /* .highlight {
+            height: 500px;
+        } */
 
-        .highlight > h1 {
-            width: 100%;
+        .highlight__content > h1 {
+            /* width: 100%; */
             height: 36px;
-            padding: 41px 0 22px 19;
+            /* padding: 41px 0 22px 19; */
             background: rgb(159, 255, 210);
         }
 
-        .highlight__content {
-            display: flex;
-            flex-direction: column;
-        }
+        /* .highlight__content > .sk-highlight {
+            overflow: hidden;
+        } */
 
-        .highlight__content > div {
-            flex: 1;
+
+        .highlight__content > .sk-highlight > div {
+            width: calc(100% - 20px);
+            margin: 10px;
+            height: 464px;
+            /* float: left; */
             text-align: center;
         }
 
-        .highlight__content > .content__first > .content__paper {
-            background: rgb(165, 207, 255);
+        .highlight__content > .sk-highlight > .content__paper {
+            background: rgb(196, 196, 255);
         }
 
-        .highlight__content > .content__first > .content__paper2 {
-            background: rgb(255, 208, 137);
+        .highlight__content > .sk-highlight > .content__paper2 {
+            background: rgb(255, 221, 159);
         }
 
-        .highlight__content > .content__two > .content__media {
-            background: rgb(255, 158, 255);
+        .highlight__content > .sk-highlight > .content__media {
+            background: rgb(255, 181, 168);
         }
 
-        .highlight__content > .content__two > .content__channel {
-            background: rgb(166, 255, 166);
+        .highlight__content > .sk-highlight > .content__channel {
+            background: rgb(255, 86, 255);
         }
+
 
         .footer {
             height: 140.4px;
@@ -158,24 +169,32 @@
 
 
         @media all and (min-width:1024px){
-            .gateway__content {
+            /* .gateway__content {
                 flex-direction: row;
+            height: 511.95px;
+            } */
+
+            .gateway__content > .sk-gateway {
+                flex-direction: row;
+             }
+
+            .gateway__content > .sk-gateway > div {
+                width: 33.33%;
+                margin: 0%;
             }
 
-            .highlight__content > .content__first {
-                display: flex;
-                flex-direction: row;
+            .highlight__content > .sk-highlight {
+                overflow: hidden;
             }
 
-            .highlight__content > .content__two {
-                display: flex;
-                flex-direction: row;
-            }
-
-            .highlight__content > div {
-                flex: 1;
+            .highlight__content > .sk-highlight > div {
+                float: left;
                 text-align: center;
+                width: calc(50% - 20px);
+                margin: 10px;
+                
             }
+
         }
     </style>
 </head>
@@ -212,25 +231,25 @@
             <div class="main__content con"></div>
         </section>
         <section class="gateway">
-            <h1>SK GATEWAY</h1>
-                <div class="gateway__content con">
-                    <div class="content__news">SK뉴스 바로가기</div>
-                    <div class="content__company">계열사 바로가기</div>
-                    <div class="content__hire">채용 바로가기</div>
+            <div class="gateway__content con">
+                <h1>SK GATEWAY</h1>
+                <div class="sk-gateway">
+                    <div class="news">SK뉴스 바로가기</div>
+                    <div class="company">계열사 바로가기</div>
+                    <div class="hire">채용 바로가기</div>
                 </div>
+            </div>
         </section>
         <section class="highlight">
-            <h1>SK HIGHLIGHT</h1>
-                <div class="highlight__content con">
-                    <div class="content__first">
-                        <div class="content__paper">SK뉴스-1</div>
-                        <div class="content__paper2">SK뉴스-2</div>
-                    </div>
-                    <div class="content__two">
-                        <div class="content__media">MEDIA SK</div>
-                        <div class="content__channel">SK채널</div>
-                    </div>
+            <div class="highlight__content con">
+                <h1>SK HIGHLIGHT</h1>
+                <div class="sk-highlight">
+                    <div class="content__paper">SK뉴스-1</div>
+                    <div class="content__paper2">SK뉴스-2</div>
+                    <div class="content__media">MEDIA SK</div>
+                    <div class="content__channel">SK채널</div>
                 </div>
+            </div> 
         </section>
     </div>
     <footer class="footer"></footer>
