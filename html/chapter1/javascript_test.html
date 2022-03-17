@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_test.html</title>
+    <script>
+        // 문제1-1. 정수 한 개를 입력받아서, 그 수가 50 이상의 수인지 50미만의 수인지 판단하고 결과는 “이상” 혹은 “미만” 으로 브라우저에 출력
+        
+        /* var num = prompt("숫자를 입력하세요", "0");
+
+        if(num >= 50) {
+            document.write("이상");
+        }
+
+        document.write("미만"); */
+
+
+        // 문제1-2. 정수 한 개를 입력받아서, 그 수가 3의 배수인지 판단하고 결과는 “3의 배수” 혹은 “3의 배수 아님” 으로 브라우저에 출력(3의 배수는 3으로 나누어 떨어짐 %)
+        
+        /* var num = prompt("숫자를 입력하세요", "0");
+
+        if(num % 3 == 0) {
+            document.write("3의 배수");
+        } else {
+            document.write("3의 배수 아님");
+        } */
+
+
+        /*   문제1-3. 초등학교에서 1학년부터 6학년까지 중간고사 시험을 보았다. 
+            학년과 점수를 입력 받은 후
+            4학년은 70점 이상이면 합격, 그 이외의 학년은 60점 이상이면 합격 처리후 
+            각각 “합격”과 “불합격”을 브라우저에 출력해보자
+            (점수가 0미만 100초과이면 “에러입니다.” 라는 alert창을  띄운다 ) */
+
+            /* var grade = prompt("학년을 입력하세요", "0");
+            var num = prompt("점수를 입력하세요", "0");
+
+            if(grade == 4 && 100 >= num >= 70){
+                document.write("합격");
+            } else if(grade < 4 || grade > 4 && 100>= num >= 60) {
+                document.write("합격");
+            } else if(num < 0 || num > 100){
+                alert("에러입니다");
+                location.reload();
+            } else {
+                document.write("불합격");
+            } */
+
+
+            // 문제2-1. 정수 한 개를 입력받아, 입력받은 수가 양수, 0, 음수인지 판단해보자.
+
+            /* var num = prompt("숫자를 입력하세요","0");
+
+            if(num > 0){
+                document.write("양수");
+            } else if(num == 0){
+                document.write("0");
+            } else{
+                document.write("음수");
+            } */
+
+
+        /* 문제2-2. 사용자로부터 신장을 입력받는다. 입력받은 신장이 
+            1) 150 이상이면, 놀이기구 이용 가능
+            2) 150 미만이면,
+            부모와 함께 왔는지 한 번 더 묻는다.(confirm창 이용) 
+            함께 왔다면 확인(TRUE)을 누르고 혼자 왔다면 취소(FALSE) 버튼을 누른다. 
+            확인 입력시: 좋은 시간 보내렴~(브라우저 출력)
+            취소 입력시: 어른 모시고 다시 오렴~(브라우저 출력) */
+
+            /* var height = prompt("신장을 입력하세요","0");
+
+            if(height >= 150){
+                document.write("놀이기구 이용 가능");
+            } 
+            
+            var result = confirm("부모님과 함께 왔나요?");
+            
+            if(result) {
+                document.write("좋은 시간 보내렴~");
+            } else {
+                document.write("어른 모시고 다시 오렴~");
+            } */
+
+        // 문제2-3. 사용자로부터 세 개의 정수를 입력받아, 그 수들의 최대값과 최소값, 합계와 평균을 구해서 브라우저에 출력
+
+            /* var num1 = prompt("첫번째 숫자를 입력하세요");
+            var num2 = prompt("두번째 숫자를 입력하세요");
+            var num3 = prompt("세번째 숫자를 입력하세요");
+            
+            var result = num1+num2+num3;
+            document.write(result); */
+
+
+        // 문제1-1. for문을 사용하여 10부터 0까지 큰 수부터 작은 수 순으로 출력하시오(10,9,8,7...순으로)
+            
+            /* for(var i = 10; i >= 0; i-- ){
+                document.write(i, "<br>");
+            } */
+
+
+            // 문제1-2. for문을 사용하여 0부터 10미만의 정수 중에서 짝수만을 작은 수부터 출력하시오.
+
+            /* for(var i = 1; i < 10; i++) {
+                if(i % 2 == 0) {
+                document.write(i, "<br>");
+            }
+        } */
+
+            // 문제1-3. for문을 사용하여 0부터 10미만의 정수의 합을 출력하시오.(결과는 45)
+
+            // var a = 0
+            
+            // for(var i = 1; i < 10; i++) {
+            //     a = a + i;
+            // }
+
+            // document.write(a);
+
+            // 문제1-4. 1부터 20미만의 정수 중에서 2 또는 3의 배수인 수의 총합을 구하시오.(결과는 117)
+
+
+            // var a = 0
+            
+            // for(var i = 1; i < 20; i++){
+            //     if(i % 2 == 0 || i % 3 == 0)
+            //         a = a + i;
+            //     }
+            //     document.write(a);
+
+            // 문제1-5. switch문을 사용하여 과목을 입력 받고 과목에 따라 과목코드를 출력하시오.(수학: 01, 영어:02, 국어: 03, 국사:04, 기타:00)
+
+            var subject = prompt("과목을 입력하세요", "");
+
+            switch(subject) {
+                case 수학 : 01;
+                break;
+                case 영어 : 02;
+                break;
+                case 국어 : 03;
+                break;
+                case 국사 : 04;
+                break;
+            }
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
