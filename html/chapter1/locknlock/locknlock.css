@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* { margin: 0; padding: 0; 
+    box-sizing: border-box; }
+
+a { text-decoration: none;}
+img { border: 0; }
+ul { list-style: none; }
+
+.header {
+    height: 65px;
+    background: rgb(255, 255, 173);
+}
+
+.header__nav {
+    width: 100%;
+    background: plum;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__nav > .logo {
+    width: 150px;
+    background: rgb(199, 199, 255);
+    position: relative;
+    left: 80px;
+}
+
+.main {
+    height: 500px;
+    background: orange;
+}
+
+.steam {
+    height: 500px;
+    background: green;
+}
