@@ -104,6 +104,324 @@
         console.log("안녕하세요!");
         return result;
     }; */
+
+    //     const num1 = 1; //전역 변수
+    //     console.log(num1);
+    // function test() { //전역 함수
+    //     const num1 = 2; //지역 변수
+    //     console.log(num1);
+    //     function test() { //지역 함수
+    //         console.log("안녕");
+    //     }
+
+    // }
+
+    // function test(num){
+    //     console.log(num);
+    // }
+
+    // test();
+
+
+    // var score = 10
+
+    // function myFnc() {
+    //     var score = 50;
+
+    //     alert(score);
+    // }
+
+    // myFnc();
+
+    // alert(score);
+
+//     function myFnc(){
+//         alert("전역 함수");
+//     }
+
+//     function outerFnc(){
+//     function myFnc() {
+//         alert("지역 함수");
+//     }
+//     myFnc();
+// }
+
+// outerFnc();
+// myFnc();
+
+
+// (function() {
+// var num = 100;
+// function menu() {
+//     num +=100;
+//     alert(num);
+// }
+
+// menu();
+// }());
+
+// (function() {
+//     var num = 100;
+//     function menu() {
+//     alert(num);
+// }
+// }());
+
+// function sum(num1, num2) {
+//     return num1 + num2;
+// }
+
+// var result = sum(10,20);
+// document.write(result);
+
+// var num = 0;
+// function testFnc() {
+//     num++;
+//     document.write(num, "<br>");
+//     if(num == 10) return;
+
+//     testFnc();
+// }
+
+// testFnc();
+
+
+// var count = 0;
+
+// myFnc();
+
+// function myFnc() {
+//     count++;
+//     document.write("hello" + count, "<br>");
+// }
+
+// myFnc();
+
+
+
+// var theFnc = function() {
+//     count++;
+//     document.write("bye" + count, "<br>");
+// }
+
+// theFnc();
+
+
+// function myFnc(name, area) {
+//     document.write("안녕하세요." + name + "입니다","<br>");
+//     document.write("사는 곳은 " + area + "입니다.","<br><br>");
+// }
+
+// myFnc("홍당무","서울");
+
+// myFnc("깍두기","부산");
+
+
+
+// 객체 = 함수(메소드) + 속성
+// 일반 function 형태의 객체
+// function Tv(color, size) {
+//         //속성
+//         this.color = color;
+//         this.size = size;
+//         this.onOff = false;
+
+//         //함수
+//         this.colorPrint = function() {
+//             console.log(`컬러는 ${this.color}`);
+//         };
+//         this.colorSize = function(sizeUp) {
+//             const newSize = this.size + sizeUp;
+//             console.log(`사이즈는 ${this.size}`);
+//             return newSize; 
+//         };
+//         this.turnOn = function() {
+//             this.onOff = true;
+//         };
+//         this.turnOff = function() {
+//             this.onOff = false;
+//         };
+//     }
+
+// const tv = new Tv("black", 50); //객체 생성
+// const tv2 = new Tv("white", 60); //객체 생성
+
+
+// tv.colorPrint("white");
+// tv.colorSize(10);
+// tv.turnOn();
+// tv.turnOff();
+
+// console.log("====================")
+
+// tv2.colorPrint("pink");
+// tv2.colorSize(5);
+// tv2.turnOn();
+// tv2.turnOff();
+
+
+
+
+
+/* // prototype 형태의 객체
+function Tv(color, size) {
+    // 속성
+    this.color = color;
+    this.size = size;
+    this.onOff = false;
+
+    //함수
+    this.colorPrint2 = function(newColor) {
+        console.log(`컬러는 ${this.color}`);
+    };
+}
+
+
+Tv.prototype.colorPrint = function() {
+    console.log(`컬러는 ${this.color}`);
+
+}
+Tv.prototype.colorSize = function(sizeUp) {
+    const newSize = this.size + sizeUp;
+            console.log(`사이즈는 ${this.size}`);
+            return newSize; 
+}
+
+Tv.prototype.turnOn = function() {
+    this.onOff = true;
+}
+
+Tv.prototype.turnOFF = function() {
+    this.onOff = false;
+}
+
+const tv = new Tv("black", 50); //객체 생성
+const tv2 = new Tv("white", 60); //객체 생성
+
+
+tv.colorPrint("white");
+tv.colorSize(10);
+tv.turnOn();
+tv.turnOFF();
+
+console.log("====================")
+
+tv2.colorPrint("pink");
+tv2.colorSize(5);
+tv2.turnOn();
+tv2.turnOFF(); */
+
+
+
+
+/* class Tv {
+    constructor(color, size) {
+        this.color = color;
+        this.size = size;
+    }
+
+    colorPrint(newColor) {
+        console.log(`컬러는 ${this.color}`);
+    };
+
+    colorSize(sizeUp) {
+        const newSize = this.size + sizeUp;
+        console.log(`사이즈는 ${this.size}`);
+        return newSize; 
+    };
+
+    turnOn() {
+        this.onOff = true;
+    };
+
+    turnOff() {
+        this.onOff = false;
+    };
+}
+
+const tv = new Tv("black", 50);
+const tv2 = new Tv("white", 60);
+
+
+tv.colorPrint("white");
+tv.colorSize(10);
+tv.turnOn();
+tv.turnOff();
+
+console.log("====================")
+
+tv2.colorPrint("pink");
+tv2.colorSize(5);
+tv2.turnOn();
+tv2.turnOff(); */
+
+
+
+/* function CheckWeight(name, height, weight) {
+    this.userName = name;
+    this.userHeight = height;
+    this.userWeight = weight;
+    this.minWeight;
+    this.maxWeight;
+
+    this.getInfo = function() {
+        var str = ""
+        str += "이름: " + this.userName + ",";
+        str += "키: " + this.userHeight + ",";
+        str += "몸무게: " + this.userWeight + "<br>";
+        return str;
+    }
+
+    this.getResult = function() {
+        this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+        this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+        if(this.userWeight >= this.minWeight
+        && this.userWeight <= this.maxWeight) {
+            return "정상 몸무게입니다";
+        } else if (this.userWeight < this.minWeight) {
+            return "정상 몸무게보다 미달입니다";
+        } else {
+            return"정상 몸무게보다 초과입니다";
+        }
+    }
+}
+
+var jang = new CheckWeight("장보리",168,62);
+var park = new CheckWeight("박달재",180,88);
+console.log(jang);
+console.log(park);
+
+document.write(jang.getInfo());
+document.write(jang.getResult()); */
+
+
+/* var num1 = Number(prompt("숫자 입력", 0));
+var num2 = Number(prompt("숫자 입력", 0));
+
+function add(a,b) {
+    var result = a + b;
+    return result;
+}
+function sub(a,b) {
+    var result = a - b;
+    return result;
+}
+function division(a,b) {
+    var result = a / b;
+    return result;
+}
+function multiple(a,b) {
+    var result = a * b;
+    return result;
+}
+
+document.write("덧셈: " + add(num1, num2) + "<br>");
+document.write("뺄셈: " +sub(num1, num2) + "<br>");
+document.write("나눗셈: " + division(num1, num2) + "<br>");
+document.write("곱셈: " + multiple(num1, num2) + "<br>");
+ */
+// es6 class 형태의 객체
     </script>
 </body>
 </html>
