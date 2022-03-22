@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+.wrap{
+	background: wheat;
+	padding-top: 60px;
+}
+
+section .con {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.slider {
+    height: 480px;
+}
+
+.slider__content {
+    background: rgb(192, 221, 255)
+}
+
+.youtube {
+    height: 605px;
+}
+
+.youtube__content {
+    background: tomato;
+}
+
+.sns {
+    height: 160px;
+}
+
+.sns__content {
+    background: turquoise;
+}
+
+.sns__content > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.sns__content > ul > li {
+    flex: 1;
+    text-align: center;
+}
+
+.guide {
+    height: 480px;
+}
+
+.guide__content {
+    /* background: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+}
+
+.guide__content > div {
+    flex: 1;
+    text-align: center;
+}
+
+.guide__content > .content__app {
+    background: pink;
+}
+
+.guide__content > .content__delivery {
+    background: rgb(48, 185, 117);
+}
+
+.store {
+    height: 597px;
+}
+
+.store__content {
+    background: honeydew;
+}
+
+.store__content ul {
+    overflow: hidden;
+    /* 1144 / 1440 */
+    width: 79.44%;
+    margin: 0 auto;
+}
+
+.store__content ul li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.banner {
+    height: 200px;
+}
+
+.banner__content {
+    background: gray;
+}
+
+@media all and (min-width:767px){
+    .guide__content {
+        flex-direction: row;
+    }
+
+    .store__content ul li {
+        width: 16.66%;
+    }
+
+}
+
+/* 1024이상 */
+@media all and (min-width:1024px){
+
+}
