@@ -2,113 +2,116 @@
 
 .wrap{
 	background: wheat;
-	padding-top: 60px;
 }
 
 section .con {
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	height: 100%;
 }
 
-.slider {
-    height: 480px;
+.slider{
+	height: 480px;
 }
 
 .slider__content {
-    background: rgb(192, 221, 255)
+	background: thistle;
 }
 
-.youtube {
-    height: 605px;
+.youtube{
+	height: 605px;
 }
 
 .youtube__content {
-    background: tomato;
+	background:tomato;
 }
 
-.sns {
-    height: 160px;
+.sns{
+	height: 160px;
 }
 
 .sns__content {
-    background: turquoise;
+	background: turquoise;
 }
 
 .sns__content > ul {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .sns__content > ul > li {
-    flex: 1;
-    text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
-.guide {
-    height: 480px;
+.guide{
+	height: 480px;
 }
 
 .guide__content {
-    /* background: yellowgreen; */
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	/* flex-direction: row; */
+	flex-direction: column;
+	/* background: yellowgreen; */
 }
 
 .guide__content > div {
-    flex: 1;
-    text-align: center;
+	flex: 1;
+	text-align: center;
 }
 
 .guide__content > .content__app {
-    background: pink;
+	background: hotpink;
 }
 
 .guide__content > .content__delivery {
-    background: rgb(48, 185, 117);
+	background:indianred;
 }
 
-.store {
-    height: 597px;
+.store{
+	height: 597px;
 }
 
 .store__content {
-    background: honeydew;
+	background: honeydew;
 }
 
 .store__content ul {
-    overflow: hidden;
-    /* 1144 / 1440 */
-    width: 79.44%;
-    margin: 0 auto;
+	/* display: flex;
+	flex-direction: row;
+	justify-content: space-around; */
+	overflow: hidden;
+	/* 1144 ÷ 1440 */
+	width: 79.44%;
+	margin: 0 auto;
 }
 
 .store__content ul li {
-    float: left;
-    width: 33.33%;
-    text-align: center;
+	float: left;
+	width: 33.33%;
+	text-align: center;
 }
 
-.banner {
-    height: 200px;
+.banner{
+	height: 200px;
 }
 
 .banner__content {
-    background: gray;
+	background: gray;
 }
 
+/* 테블릿: 767px 이상*/
 @media all and (min-width:767px){
-    .guide__content {
-        flex-direction: row;
-    }
-
-    .store__content ul li {
-        width: 16.66%;
-    }
-
+	.guide__content {
+		flex-direction: row;
+	}
+    
+	.store__content ul li {
+		width: 16.66%;
+	}
 }
 
-/* 1024이상 */
-@media all and (min-width:1024px){
+/* pc: 1024px 이상 */
+@media all and (min-width:1024px){ 
 
 }
