@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function() {
+            $(".btn_1").on("mouseover", function() {
+                alert("HELLO!");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼1</button></p>
+    </div>
+    <p>
+        <button class="del_1">버튼1 이벤트 해제</button>
+        <button class="del_2">버튼2 이벤트 해제</button>
+    </p>
+</body>
+</html>

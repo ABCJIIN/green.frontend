@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <script src="../chapter1/js/jquery-1.10.2.min.js"></script>
+    <script>
+        // 단독 이벤트 등록
+        // $('#btn').click(function(){
+        //     console.log("hi");
+        // });
+
+        // 그룹 이벤트 등록
+        // $('$btn').on("mmouseover focus", function(){
+        //     console.log('hello');
+        // });
+
+        // $('#btn').on({
+        //     "mouseover focus": function() {
+        //         console.log('hello');
+        //     }
+        // });
+
+        $('#btn').on({
+            "mouseover": function() {
+                console.log('hello');
+            },
+            "focus": function() {
+                console.log('bye');
+            }
+        });
+
+        
+
+    </script>
+</body>
+</html>
