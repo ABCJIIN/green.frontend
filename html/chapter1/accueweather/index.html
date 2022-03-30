@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>acuueWeather</title>
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="../css/library/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./library/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./library/bootstrap-5.1.1-dist/css/bootstrap.min.css">
 </head>
 <body>
     <header id="main_header">
@@ -44,15 +45,26 @@
                     </li>
                 </ul>
                 <div class="setting">
-                    <a href="#"><i class="fa-solid fa-gear"></i></a>
+                    <a href="#"><i class="fas fa-cog fa-lg"></i></a>
                 </div>
                 <div class="trigger">
-                    <a href="#" class="mobile hamburger"><i class="fa-solid fa-bars"></i></a>
-                    <a href="#" class="mobile close"><i class="fa-solid fa-xmark"></i></a>
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-lg"></i></a>
                 </div>
             </div>
         </div>
-        <div id="search_box"></div>
+        <div id="search_box">
+            <div id="search_bar">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="위치 검색" aria-label="위치 검색" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div id="current_location">
+                <div>종로 1,2,3,4 가동</div>
+                <div>대한민국</div>
+            </div>
+        </div>
     </header>
     <div id="main_content">
         <div id="main_top">
@@ -119,6 +131,7 @@
             </aside>
         </div>
     </div>
+    <div id="mobile_menu"></div>
     <footer id="main_footer">
         <div>
             <a href="#">전 세계</a> > 
@@ -139,5 +152,11 @@
             </div>
         </div>
     </footer>
+    <script src="./library/jq/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=abcd004ea5ec6892bb15660fb78b575a"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/forcast.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
